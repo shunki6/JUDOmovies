@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">JUDOMovies</string>
+    <string name="list0">Watanabe\n    VS\nHaruyama\n    -81kg Final of National Convention in 2016\n    Point [ 0:30, 0:50 ]</string>
+    <string name="list1">Nakai (olympic 5 place in 2012)\n    VS\nYasuda\n    -81kg National Convention in 2013\n    Point [ 0:40, 1:05 ]</string>
+    <string name="list2">Nishiyama (Olympic Bronze medalist in 2012)\n    VS\nKato\n    -90kg Final of National Convention in 2012\n    Point [ 0:15 ]</string>
+    <string name="list3">Baker (Olympic Champion in 2016)\n    VS\nKato\n    -90kg National Convention in 2013\n    Point [ 0:50 ]</string>
+    <string name="list4">Ono (World Bronze medalist in 2011)\n    VS\nKobayashi\n    -100kg Semi final of National Convention in 2013\n    Point [ 0:50 ]</string>
+    <string name="list5">Wolf\n    VS\nShimowada\n    -100kg Final of National Convention in 2015\n    Point [ 0:33 0:57 ]</string>
+    <string name="list6">Harasawa (Olympic Silver medalist in 2016)\n    VS\nShichinohe (World Silver medalist in 2015)\n    +100kg Final of National Convention in 2016\n    Point [ 1:15 ]</string>
+    <string name="list7">Oujitani (World rank 3)\n    VS\nNishigata\n    +100kg Final of National Convention in 2015\n    Point [ 1:00 ]</string>
+    <string name="list8">Nagayama\n    VS\nShishime (World Bronze medalist in 2015)\n    -60kg Final of National Convention in 2016\n    Point [ 1:00 ]</string>
+    <string name="list9">Takato (World Champion in 2014)\n    VS\nKawabata\n    -60kg Semi final of National Convention in 2013\n    Point [ 0:50 ]</string>
+    <string name="list10">Isoda\n    VS\nHashiguchi\n    -66kg Final of National Convention in 2016\n    Point [ 0:50, 1:15 ]</string>
+    <string name="list11">Ebinuma (World Champion in 2014)\n    VS\nTakaichi\n    -66kgFinal of National Convention in 2015\n    Point [ 0:30 0:50 ]</string>
+    <string name="list12">Nakaya (World Champion in 2014)\n    VS\nNishiyama\n    -73kgFinal of National Convention in 2013\n    Point [ 0:45~1:35 ]</string>
+    <string name="list13">Ono (Olympic Champion 2016)\n    VS\nAwano (World Bronze medalist in 2010)\n    -73kg National Convention in 2013\n    Point [ 0:35 0:55 ]</string>
+    <string name="list14">Warming up for Newaza</string>
+    <string name="list15">Osotogari</string>
+
+    <string name="url0">https://youtu.be/_7k0O123xVQ?list=PLpUDhXOLNOWI0oBoQ9tCZ7v9afOUH216z</string>
+    <string name="url1">https://youtu.be/MYUsvkn873k?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url2">https://youtu.be/ZSDdcLSK0zg?list=PLpUDhXOLNOWI15d4GZbfG5EgBvAP7a_uq</string>
+    <string name="url3">https://youtu.be/vSIHk_nnKc4?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url4">https://youtu.be/wGGFYmF96Lg?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url5">https://youtu.be/gAFD0I5DHp0?list=PLpUDhXOLNOWKtNkJLaneXx7xB8IqFf4Cw</string>
+    <string name="url6">https://youtu.be/GDABQCFwK5A?list=PLpUDhXOLNOWJHMl1JSad8j6nQriTJ8VNl</string>
+    <string name="url7">https://youtu.be/MZksbZP4zbM?list=PLpUDhXOLNOWLTEoL8TJ8jzT_baHGAUwza</string>
+    <string name="url8">https://youtu.be/P28kyfqI4kA?list=PLpUDhXOLNOWI0oBoQ9tCZ7v9afOUH216z</string>
+    <string name="url9">https://youtu.be/10EuckfhCAc?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url10">https://youtu.be/-mpRq1GIsRg?list=PLpUDhXOLNOWI0oBoQ9tCZ7v9afOUH216z</string>
+    <string name="url11">https://youtu.be/o8oP5ZvHkxQ?list=PLpUDhXOLNOWLTEoL8TJ8jzT_baHGAUwza</string>
+    <string name="url12">https://youtu.be/1c84j4LI2LY?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url13">https://youtu.be/zT7D_myiJ3s?list=PLpUDhXOLNOWIDsYB97hLQA9NAT3WLHBZD</string>
+    <string name="url14">https://youtu.be/qJfDrTuIuwc?list=PLpUDhXOLNOWLQao0V3_i4Y7WNId2MGRyT</string>
+    <string name="url15">https://youtu.be/vK9Qg4s6vY4?list=PLpUDhXOLNOWKAIr-vEiKKejmiapRM47kj</string>
+
+</resources>
