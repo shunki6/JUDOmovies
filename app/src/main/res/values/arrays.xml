@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="lists">
+        <item>@string/list0</item>
+        <item>@string/list1</item>
+        <item>@string/list2</item>
+        <item>@string/list3</item>
+        <item>@string/list4</item>
+        <item>@string/list5</item>
+        <item>@string/list6</item>
+        <item>@string/list7</item>
+        <item>@string/list8</item>
+        <item>@string/list9</item>
+        <item>@string/list10</item>
+        <item>@string/list11</item>
+        <item>@string/list12</item>
+        <item>@string/list13</item>
+        <item>@string/list14</item>
+        <item>@string/list15</item>
+    </array>
+    <array name="links">
+        <item>@string/url0</item>
+        <item>@string/url1</item>
+        <item>@string/url2</item>
+        <item>@string/url3</item>
+        <item>@string/url4</item>
+        <item>@string/url5</item>
+        <item>@string/url6</item>
+        <item>@string/url7</item>
+        <item>@string/url8</item>
+        <item>@string/url9</item>
+        <item>@string/url10</item>
+        <item>@string/url11</item>
+        <item>@string/url12</item>
+        <item>@string/url13</item>
+        <item>@string/url14</item>
+        <item>@string/url15</item>
+    </array>
+</resources>

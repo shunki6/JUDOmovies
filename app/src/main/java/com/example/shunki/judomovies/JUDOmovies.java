@@ -28,9 +28,11 @@ public class JUDOmovies extends AppCompatActivity {
     private final static int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
     private final static int MENU_ITEM0 = 0;
 
+
     //UI
     private ListView listView;//リストビュー
     private ArrayList<JudoItem> items;//要素群
+
 
     //アクティビティ起動時に呼ばれる
     @Override
@@ -38,82 +40,8 @@ public class JUDOmovies extends AppCompatActivity {
         super.onCreate(bundle);
         this.setTitle("Movies");
 
-        //要素群の読み込み
-        items = new ArrayList<JudoItem>();
-        for (int i = 0; i < 16; i++) {
-            JudoItem item = new JudoItem();
-            item.checked = false;
-//            item.link = "";
-            if (i == 0) {
-                item.link = (getString(R.string.url0));
-            }else if (i == 1) {
-                item.link = (getString(R.string.url1));
-            }else if (i == 2) {
-                item.link = (getString(R.string.url2));
-            }else if (i == 3) {
-                item.link = (getString(R.string.url3));
-            }else if (i == 4) {
-                item.link = (getString(R.string.url4));
-            }else if (i == 5) {
-                item.link = (getString(R.string.url5));
-            }else if (i == 6) {
-                item.link = (getString(R.string.url6));
-            }else if (i == 7) {
-                item.link = (getString(R.string.url7));
-            }else if (i == 8) {
-                item.link = (getString(R.string.url8));
-            }else if (i == 9) {
-                item.link = (getString(R.string.url9));
-            }else if (i == 10) {
-                item.link = (getString(R.string.url10));
-            }else if (i == 11) {
-                item.link = (getString(R.string.url11));
-            }else if (i == 12) {
-                item.link = (getString(R.string.url12));
-            }else if (i == 13) {
-                item.link = (getString(R.string.url13));
-            }else if (i == 14) {
-                item.link = (getString(R.string.url14));
-            }else {
-                item.link = (getString(R.string.url15));
-            }
-//            item.title = "";
-            if (i == 0) {
-                item.title = (getString(R.string.list0));
-            }else if (i == 1) {
-                item.title = (getString(R.string.list1));
-            }else if (i == 2) {
-                item.title = (getString(R.string.list2));
-            }else if (i == 3) {
-                item.title = (getString(R.string.list3));
-            }else if (i == 4) {
-                item.title = (getString(R.string.list4));
-            }else if (i == 5) {
-                item.title = (getString(R.string.list5));
-            }else if (i == 6) {
-                item.title = (getString(R.string.list6));
-            }else if (i == 7) {
-                item.title = (getString(R.string.list7));
-            }else if (i == 8) {
-                item.title = (getString(R.string.list8));
-            }else if (i == 9) {
-                item.title = (getString(R.string.list9));
-            }else if (i == 10) {
-                item.title = (getString(R.string.list10));
-            }else if (i == 11) {
-                item.title = (getString(R.string.list11));
-            }else if (i == 12) {
-                item.title = (getString(R.string.list12));
-            }else if (i == 13) {
-                item.title = (getString(R.string.list13));
-            }else if (i == 14) {
-                item.title = (getString(R.string.list14));
-            }else {
-                item.title = (getString(R.string.list15));
-            }
-            items.add(item);
-        }
-//       loadItems();
+
+        loadItems();
 
         //リストビューの生成
         listView = new ListView(this);
@@ -122,8 +50,14 @@ public class JUDOmovies extends AppCompatActivity {
         setContentView(listView);
     }
 
+//    @Override
+//    public void onResume(){
+//        super.onResume();
+//        loadItems();
+//    }
+
     @Override
-    public void onPause(){
+    public void onPause() {
         super.onPause();
         saveItems();
     }
@@ -219,15 +153,15 @@ public class JUDOmovies extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(JUDOmovies.this);
                 checkBox.setTextColor(Color.BLACK);
                 checkBox.setId(R.id.cell_checkbox);
-                checkBox.setChecked(true);
+                checkBox.setChecked(false);
                 checkBox.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
                 checkBox.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View sender) {
                         //情報の更新
-                        int pos = Integer.parseInt((String)sender.getTag());
+                        int pos = Integer.parseInt((String) sender.getTag());
                         JudoItem item = items.get(pos);
-                        item.checked = ((CheckBox)sender).isChecked();
+                        item.checked = ((CheckBox) sender).isChecked();
                     }
                 });
                 layout.addView(checkBox);
@@ -236,20 +170,20 @@ public class JUDOmovies extends AppCompatActivity {
                 TextView textView = new TextView(JUDOmovies.this);
                 textView.setTextColor(Color.BLACK);
                 textView.setId(R.id.cell_textview);
-                textView.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+                textView.setLayoutParams(new LinearLayout.LayoutParams(WC, 250));   //文がリスト内に収まるように調整
                 layout.addView(textView);
 
                 view = layout;
             }
 
             //値の指定
-            CheckBox checkBox = (CheckBox)view.findViewById(R.id.cell_checkbox);
+            CheckBox checkBox = (CheckBox) view.findViewById(R.id.cell_checkbox);
             checkBox.setChecked(item.checked);
-            checkBox.setTag(""+pos);
-            TextView textView = (TextView)view.findViewById(R.id.cell_textview);
+            checkBox.setTag("" + pos);
+            TextView textView = (TextView) view.findViewById(R.id.cell_textview);
             textView.setText(item.title);   //これでチェックボックスをタッチする幅を抑えられる
-            textView.setTag(""+pos);
-            view.setTag(""+pos);
+            textView.setTag("" + pos);
+            view.setTag("" + pos);
             return view;
         }
     }
@@ -272,11 +206,24 @@ public class JUDOmovies extends AppCompatActivity {
         //プリファレンスからの読み込み
         SharedPreferences pref = getSharedPreferences(
                 "JUDOmovies", MODE_PRIVATE);
-        String json = pref.getString("items","");
-
-        //JSONをArrayListに変換
-        items = items2list(json);
+        String json = pref.getString("items", "");
+        items = new ArrayList<JudoItem>();
+        if (json.isEmpty()) {
+            for (int i = 0; i < 16; i++) {      //アプリインストール後の初期値を設定する
+                JudoItem item = new JudoItem();
+                String[] lists = getResources().getStringArray(R.array.lists);
+                item.title = lists[i];
+                String[] links = getResources().getStringArray(R.array.links);
+                item.link = links[i];
+                item.checked = false;   //この位置でないと「チェック済み動画」がリストの最上部にきてしまう
+                items.add(item);
+            }
+        } else {
+            //JSONをArrayListに変換
+            items = items2list(json);
+        }
     }
+
 
     //ArrayListをJSONに変換
     private String list2json(ArrayList<JudoItem> items) {
@@ -301,7 +248,7 @@ public class JUDOmovies extends AppCompatActivity {
         ArrayList<JudoItem> items = new ArrayList<JudoItem>();
         try {
             JSONArray array = new JSONArray(json);
-            for (int i = 0; i < array.length(); i++) {
+            for (int i = 0; i < 16; i++) {  //　[ i < array.length()]にすると、チェックしたリストしか読み込まれない。
                 JSONObject obj = array.getJSONObject(i);
                 JudoItem item = new JudoItem();
                 item.title = obj.getString("title");
@@ -314,4 +261,5 @@ public class JUDOmovies extends AppCompatActivity {
         }
         return items;
     }
+
 }

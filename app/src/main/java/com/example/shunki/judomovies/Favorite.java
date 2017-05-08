@@ -24,7 +24,6 @@ import java.util.ArrayList;
 public class Favorite extends AppCompatActivity {
     //定数
     private final static int WC = ViewGroup.LayoutParams.WRAP_CONTENT;
-    private final static int MENU_ITEM0 = 0;
 
     //UI
     private ListView listView;//リストビュー
@@ -53,20 +52,26 @@ public class Favorite extends AppCompatActivity {
         setContentView(listView);
     }
 
-    @Override
-    public void onPause(){
-        super.onPause();
-        saveItems();
-    }
+//    @Override
+//    public void onPause(){
+//        super.onPause();
+//        saveItems();
+//    }
 
-    //アクティビティ停止時に呼ばれる
-    @Override
-    public void onStop() {
-        super.onStop();
+//    @Override
+//    public void onSaveInstantState(){
+//        super.onSaveInstanceState();
+//        saveItems();
+//    }
 
-        //要素群の書き込み
-        saveItems();
-    }
+//    //アクティビティ停止時に呼ばれる
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//
+//        //要素群の書き込み
+//        saveItems();
+//    }
 
 
 
@@ -129,6 +134,7 @@ public class Favorite extends AppCompatActivity {
                 checkBox.setTextColor(Color.BLACK);
                 checkBox.setId(R.id.cell_checkbox);
                 checkBox.setChecked(true);
+//                checkBox.setClickable(false);
                 checkBox.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
                 checkBox.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -145,7 +151,7 @@ public class Favorite extends AppCompatActivity {
                 TextView textView = new TextView(Favorite.this);
                 textView.setTextColor(Color.BLACK);
                 textView.setId(R.id.cell_textview);
-                textView.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+                textView.setLayoutParams(new LinearLayout.LayoutParams(WC, 250));
                 layout.addView(textView);
 
                 view = layout;
